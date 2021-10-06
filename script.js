@@ -1,7 +1,7 @@
 function pointer(element, value) {
 
     element.style.setProperty('--rotation', value * 360)
-    console.log(value)
+
 
 }
 
@@ -23,6 +23,12 @@ function clock() {
 
 }
 
+function stopAll() {
+    console.log("Funciona");
+}
+
 setInterval(() => {
     clock();
 }, 1000);
+
+document.getElementById("stop").onClick = stopAll;
