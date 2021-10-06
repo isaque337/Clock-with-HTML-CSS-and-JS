@@ -23,12 +23,19 @@ function clock() {
 
 }
 
-function stopAll() {
-    console.log("Funciona");
-}
+var id;
 
-setInterval(() => {
+id = setInterval(() => {
     clock();
 }, 1000);
 
-document.getElementById("stop").onClick = stopAll;
+
+function stop_all() {
+
+    clearInterval(id);
+
+    console.log('Relógio parado');
+
+}
+
+document.getElementById("stop").onclick = stop_all;
